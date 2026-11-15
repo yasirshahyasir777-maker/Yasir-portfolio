@@ -84,3 +84,71 @@
             color: #475569;
             margin-bottom: 12px;
         }
+
+                #typing-text {
+                    color: #00bfff;
+                    font-weight: 700;
+                    border-right: 3px solid #00bfff;
+                    padding-right: 5px;
+                    animation: blink 0.7s infinite;
+                }
+        
+                @keyframes blink {
+                    50% {
+                        border-color: transparent;
+                    }       }
+
+                                        /* Professional Profile Card */
+                                        .profile-card {
+                                            background: linear-gradient(135deg, #101b3f, #29246b, #164e83);
+                                            border: 1px solid rgba(255, 255, 255, 0.2);
+                                            border-radius: 25px;
+                                            padding: 35px;
+                                            margin-top: 30px;
+                                            margin-bottom: 30px;
+                                            box-shadow: 0 15px 40px rgba(20, 30, 90, 0.25);
+                                            overflow: hidden;
+                                            position: relative;
+                                        }
+                    
+                                        /* Profile introduction */
+                                        .profile-card .hero-copy {
+                                            position: relative;
+                                            z-index: 2;
+                                        }
+                    
+                                        /* Colorful animated title */
+                                        .profile-card #typing-text {
+                                            color: #55e6ff;
+                                            font-weight: 800;
+                                        }
+                    
+                                        /* Mobile friendly card */
+                                        @media (max-width: 768px) {
+                                            .profile-card {
+                                                padding: 20px;
+                                                border-radius: 18px;
+                                            }
+                                        }
+                                                                                /* Clear and bright profile text */
+                                                                                .profile-card .hero-copy h1 {
+                                                                                    color: #ffffff !important;
+                                                                                }
+                                        
+                                                                                .profile-card .hero-text {
+                                                                                    color: #f1f5ff !important;
+                                                                                }
+                                        
+                                                                                .profile-card #typing-text {
+                                                                                    color: #ffe45e !important;
+                                                                                    font-weight: 800;
+                                                                                    text-shadow: 0 0 10px rgba(255, 228, 94, 0.35);
+                                                                                }
+                                        
+                                                                                .profile-card .eyebrow {
+                                                                                    color: #55e6ff !important;
+                                                                                }
+                                        
+                                                                                .profile-card .hero-copy em {
+                                                                                    color: #55e6ff !important;
+                                                                                }

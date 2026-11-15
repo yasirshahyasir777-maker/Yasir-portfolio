@@ -29,3 +29,48 @@ document.getElementById("contactForm").addEventListener("submit", (event) => {
     "Your email app should open now. Replace the sample recipient email in script.js first.";
   window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const typingText = document.getElementById("typing-text");
+
+  if (!typingText) return;
+
+  const words = [
+    "Mathematics Student",
+    "Python Programmer",
+    "Web Developer",
+    "AI Agent Learner"
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    typingText.textContent = currentWord.substring(0, charIndex);
+
+    if (!deleting) {
+      charIndex++;
+
+      if (charIndex > currentWord.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1500);
+        return;
+      }
+    } else {
+      charIndex--;
+
+      if (charIndex < 0) {
+        deleting = false;
+        charIndex = 0;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    setTimeout(typeEffect, deleting ? 60 : 100);
+  }
+
+  typeEffect();
+});
