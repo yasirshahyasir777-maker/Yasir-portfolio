@@ -152,3 +152,19 @@
                                                                                 .profile-card .hero-copy em {
                                                                                     color: #55e6ff !important;
                                                                                 }
+/* Fix profile photo on mobile */
+.profile-card .hero-art {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.profile-card .hero-art img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+}
